@@ -1,4 +1,6 @@
-package ru.yandex.coderun.triangle;
+package ru.yandex.coderun.solutions.triangle;
+
+import ru.yandex.coderun.exceptions.SolutionException;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -37,17 +39,11 @@ public class Main {
         for (int i = 0; i < max; i++) {
             int side = Integer.parseInt(input[i]);
             if (side <= 0) {
-                throw new CustomException("Wrong side");
+                throw new SolutionException("Wrong side");
             }
             sides[i] = side;
         }
         return sides;
-    }
-}
-
-class CustomException extends RuntimeException {
-    public CustomException(String message) {
-        super(message);
     }
 }
 

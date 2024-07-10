@@ -1,11 +1,11 @@
-package ru.yandex.coderun;
+package ru.yandex.coderun.solutions.triangle;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import ru.yandex.coderun.triangle.Triangle;
+import ru.yandex.coderun.Main;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -131,6 +131,6 @@ class MainTest {
     @Order(22)
     @Test
     void Action_ExceptionTest() {
-        assertThrows(Main.CustomException.class, () -> isPossibleToCreateTriangleFromSides(new String[]{"5", "-3", "4"}));
+        assertThrows(Main.SolutionException.class, () -> isPossibleToCreateTriangleFromSides(new String[]{"5", "-3", "4"}));
     }
 }

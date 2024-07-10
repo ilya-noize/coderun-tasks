@@ -34,8 +34,8 @@ public class Main {
         return sides;
     }
 
-    static class CustomException extends RuntimeException {
-        public CustomException(String message) {
+    public static class SolutionException extends RuntimeException {
+        public SolutionException(String message) {
             super(message);
         }
     }

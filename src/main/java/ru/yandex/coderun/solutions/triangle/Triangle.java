@@ -1,4 +1,6 @@
-package ru.yandex.coderun.triangle;
+package ru.yandex.coderun.solutions.triangle;
+
+import ru.yandex.coderun.exceptions.SolutionException;
 
 public final class Triangle {
     public static final int TRIANGLE_SIDES = 3;
@@ -7,7 +9,7 @@ public final class Triangle {
 
     public Triangle(int[] sides) {
         if (sides.length > TRIANGLE_SIDES || sides.length < TRIANGLE_SIDES) {
-            throw new CustomException("Wrong triangle");
+            throw new SolutionException("Wrong triangle");
         }
         this.sides = sides;
     }
