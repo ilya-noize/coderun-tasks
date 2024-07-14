@@ -1,5 +1,12 @@
+[Pull Request with simple task](https://github.com/ilya-noize/coderun-tasks/pull/1)
+
 # 1. Треугольник
 ![1.png](src/main/resources/1.png)
+
+
+# 2. Возрастает ли список?
+![2.png](src/main/resources/2.png)
+
 
 # 422. Две команды
 ![422.png](src/main/resources/422.png)
@@ -13,5 +20,5 @@
 ![439.png](src/main/resources/439.png)
 
 
-# 448. Вложенные циклы
+# 448. Вложенные циклы (hard)
 ![448.png](src/main/resources/448.png)
