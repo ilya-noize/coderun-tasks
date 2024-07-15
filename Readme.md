@@ -8,6 +8,10 @@
 ![2.png](src/main/resources/2.png)
 
 
+# 3. OpenCalculator
+![3.png](src/main/resources/3.png)
+
+
 # 422. Две команды
 ![422.png](src/main/resources/422.png)
 
