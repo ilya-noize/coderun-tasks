@@ -1,4 +1,4 @@
-[Pull Request with simple task](https://github.com/ilya-noize/coderun-tasks/pull/1)
+[Pull Request with simple tasks](https://github.com/ilya-noize/coderun-tasks/pull/1)
 
 # 1. Треугольник
 ![1.png](src/main/resources/1.png)
