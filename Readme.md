@@ -16,6 +16,10 @@
 ![4.png](src/main/resources/4.png)
 
 
+# 5. Ближайшее число
+![5.png](src/main/resources/5.png)
+
+
 # 422. Две команды
 ![422.png](src/main/resources/422.png)
 
