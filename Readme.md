@@ -12,6 +12,10 @@
 ![3.png](src/main/resources/3.png)
 
 
+# 4. Количество слов в тексте
+![4.png](src/main/resources/4.png)
+
+
 # 422. Две команды
 ![422.png](src/main/resources/422.png)
 
