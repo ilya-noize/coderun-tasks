@@ -1,5 +1,12 @@
 [Pull Request with simple tasks](https://github.com/ilya-noize/coderun-tasks/pull/1)
 
+
+# Задачи из курса Java. Базовый Курс
+
+[Ссылка на курс](https://stepik.org/course/187)<br/>
+
+[Project package](src/main/java/ru/yandex/coderun/solutions/stepik)<br/>
+
 # 1. Треугольник
 ![1.png](src/main/resources/1.png)
 
