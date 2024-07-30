@@ -34,15 +34,39 @@ public class StepikTrainee {
      * @return new array containing all elements from a1 and a2, sorted
      */
     public static int[] mergeArrays(int[] a1, int[] a2) {
-        int lA1 = a1.length;
-        int lA2 = a2.length;
-        int[] a = new int[lA1 + lA2];
-        for (int i = 0; i < lA1; i++) {
-            for (int j = 0; j < lA2; j++) {
-                a[i + j] = Math.min(a1[i], a2[j]);
-            }
-        }
+        int l1 = a1.length;
+        int l2 = a2.length;
+        int[] a = new int[l1 + l2];
+        merge(a1, a2, a);
         return a;
+    }
+
+    private static void merge(int[] a1, int[] a2, int[] a) {
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (k < a.length) {
+            if (i < a1.length) {
+                if (j < a2.length) {
+                    if (a1[i] < a2[j]) {
+                        a[k] = a1[i];
+                        i++;
+                    } else {
+                        a[k] = a2[j];
+                        j++;
+                    }
+                } else {
+                    a[k] = a1[i];
+                    i++;
+                }
+            } else {
+                if (j < a2.length) {
+                    a[k] = a2[j];
+                    j++;
+                }
+            }
+            k++;
+        }
     }
 
     /**
@@ -81,5 +105,57 @@ public class StepikTrainee {
             return true;
         }
         return isPolindrom(string, ++i);
+    }
+
+    /**
+     * Вам дан список ролей и сценарий пьесы в виде массива строчек.<br/>
+     * <br/>
+     * Каждая строчка сценария пьесы дана в следующем виде:<br/>
+     * Роль: текст<br/>
+     * <br/>
+     * Текст может содержать любые символы.<br/>
+     * <br/>
+     * Напишите метод, который будет группировать строчки по ролям,
+     * пронумеровывать их и возвращать результат в виде готового текста (см. пример).
+     * Каждая группа распечатывается в следующем виде:<br/>
+     * <br/>
+     * Роль:<br/>
+     * i) текст<br/>
+     * j) текст2<br/>
+     * ...<br/>
+     * ==перевод строки==<br/>
+     * <br/>
+     * i и j -- номера строк в сценарии.
+     * Индексация строчек начинается с единицы,
+     * выводить группы следует в соответствии с порядком ролей.
+     * Переводы строк между группами обязательны,
+     * переводы строк в конце текста не учитываются.
+     * <p>
+     *
+     * @param roles     Роли
+     * @param textLines Текст роли
+     * @return Группировка текста по ролям.
+     */
+    public static String printTextPerRole(String[] roles, String[] textLines) {
+        final String NEW_LINE = "\n";
+        StringBuilder printTextPerRole = new StringBuilder();
+        for (String role : roles) {
+            boolean isStartingText = true;
+            for (int textLine = 1; textLine <= textLines.length; textLine++) {
+                if (isStartingText) {
+                    printTextPerRole.append(role).append(":").append(NEW_LINE);
+                }
+                String textRole = textLines[textLine - 1];
+                if (textRole.startsWith(role + ":")) {
+                    printTextPerRole.append(textLine).append(") ")
+                            .append(textRole.replaceFirst(String.format("%s: ", role),""))
+                            .append(NEW_LINE);
+                }
+                isStartingText = false;
+            }
+            printTextPerRole.append(NEW_LINE);
+        }
+
+        return printTextPerRole.toString();
     }
 }
