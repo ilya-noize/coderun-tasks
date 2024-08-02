@@ -148,7 +148,7 @@ public class StepikTrainee {
                 String textRole = textLines[textLine - 1];
                 if (textRole.startsWith(role + ":")) {
                     printTextPerRole.append(textLine).append(") ")
-                            .append(textRole.replaceFirst(String.format("%s: ", role),""))
+                            .append(textRole.replaceFirst(String.format("%s: ", role), ""))
                             .append(NEW_LINE);
                 }
                 isStartingText = false;
