@@ -2,6 +2,9 @@ package ru.yandex.coderun.solutions.stepik;
 
 import java.math.BigInteger;
 import java.util.Arrays;
+import java.util.function.DoubleUnaryOperator;
+
+import static java.lang.Math.abs;
 
 public class StepikTrainee {
 
@@ -158,4 +161,24 @@ public class StepikTrainee {
 
         return printTextPerRole.toString();
     }
+
+    /**
+     * Интегрирование
+     * @param f function
+     * @param a begin
+     * @param b end
+     * @return double result
+     */
+    public static double integrate(DoubleUnaryOperator f, double a, double b) {
+        final int n = 1_000_000;
+        final double h = abs(a - b) / n;
+        double result = 0;
+        for (int i = 0; i < n; i++) {
+            result += f.applyAsDouble(a + h * (i + 0.5));
+        }
+        result *= h;
+
+        return result;
+    }
+
 }
