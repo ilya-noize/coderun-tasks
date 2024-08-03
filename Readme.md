@@ -1,6 +1,5 @@
 [Pull Request with simple tasks](https://github.com/ilya-noize/coderun-tasks/pull/1)
 
-
 # Задачи из курса Java. Базовый Курс
 
 [Ссылка на курс](https://stepik.org/course/187)<br/>
